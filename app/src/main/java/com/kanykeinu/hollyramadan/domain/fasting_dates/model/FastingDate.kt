@@ -1,4 +1,4 @@
-package com.kanykeinu.hollyramadan.domain.model
+package com.kanykeinu.hollyramadan.domain.fasting_dates.model
 
 import com.google.gson.annotations.SerializedName
 

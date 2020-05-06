@@ -1,4 +1,4 @@
-package com.kanykeinu.hollyramadan.base
+package com.kanykeinu.hollyramadan.util
 
 import android.content.Context
 import java.io.IOException

@@ -3,4 +3,11 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="fasting_time">Fasting time</string>
+    <string name="suhur">Suhur</string>
+    <string name="fasting_notifications">Fasting notifications</string>
+    <string name="wake_up">Wake up</string>
+    <string name="prepare_to_eat">Prepare to eat</string>
+    <string name="today">Today</string>
+    <string name="iftar">Iftar</string>
 </resources>

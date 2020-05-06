@@ -3,7 +3,7 @@ package com.kanykeinu.hollyramadan.data.fasting_dates.cache.model
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import com.kanykeinu.hollyramadan.data.Tables
+import com.kanykeinu.hollyramadan.data.common.Tables
 
 @Entity(tableName = Tables.FASTING_DATES)
 data class FastingDateEntity(

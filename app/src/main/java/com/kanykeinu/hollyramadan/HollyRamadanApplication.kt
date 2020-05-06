@@ -5,6 +5,8 @@ import android.content.Context
 import android.content.SharedPreferences
 import androidx.room.Room
 import com.kanykeinu.hollyramadan.data.common.AppDatabase
+import com.kanykeinu.hollyramadan.util.FlipperHelper
+import timber.log.Timber
 
 class HollyRamadanApplication : Application() {
 
@@ -31,6 +33,10 @@ class HollyRamadanApplication : Application() {
         application = this
         database = provideDataBase(applicationContext)
         cache = provideSharedPreferences(applicationContext)
+        if (BuildConfig.DEBUG) {
+            Timber.plant(Timber.DebugTree())
+        }
+        FlipperHelper.initFlipper(this.applicationContext)
     }
 
     private fun provideDataBase(context: Context): AppDatabase =
