@@ -19,6 +19,7 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.rxkotlin.subscribeBy
 import io.reactivex.schedulers.Schedulers
 import kotlinx.android.synthetic.main.activity_main.*
+import timber.log.Timber
 
 class MainActivity : AppCompatActivity() {
 
@@ -51,13 +52,16 @@ class MainActivity : AppCompatActivity() {
     @SuppressLint("CheckResult")
     private fun saveToDb(dates: List<FastingDate>, hadiths: List<Hadith>) {
         HadithCacheSource.saveAll(hadiths)
-            .flatMap { FastingDatesCacheSource.saveAll(dates) }
+            .concatWith(FastingDatesCacheSource.saveAll(dates))
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribeBy(
                 onError = { nav_view.showSnackbar(it.message) },
-                onSuccess = {
-                    if (it.isNotEmpty())
-                    navView.setupWithNavController(navController) })
+                onComplete = {
+                    navView.setupWithNavController(navController) },
+                onNext = {
+                    Timber.d(" Id is %s",it)
+                }
+            )
     }
 }

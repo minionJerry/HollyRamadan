@@ -10,4 +10,6 @@
     <string name="prepare_to_eat">Prepare to eat</string>
     <string name="today">Today</string>
     <string name="iftar">Iftar</string>
+    <string name="hadith">Hadith</string>
+    <string name="source">Source:</string>
 </resources>

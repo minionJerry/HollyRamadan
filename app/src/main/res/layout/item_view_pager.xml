@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_hadith_text"
+        style="@style/CalendarText"
+        android:textSize="@dimen/text_large"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        tools:text="Sed ut perspiciatis, unde omnis iste
+natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut "/>
+
+    <TextView
+        android:id="@+id/tv_title"
+        style="@style/Description.Time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_hadith_text"
+        android:layout_marginTop="@dimen/margin_xlarge"
+        android:text="@string/source" />
+
+    <TextView
+        android:id="@+id/tv_source"
+        style="@style/Description.Time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_hadith_text"
+        android:layout_alignTop="@id/tv_title"
+        android:layout_alignBottom="@id/tv_title"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:layout_toEndOf="@id/tv_title"
+        tools:text="@string/source" />
+</RelativeLayout>

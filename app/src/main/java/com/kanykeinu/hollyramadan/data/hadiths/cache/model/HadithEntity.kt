@@ -9,7 +9,7 @@ import com.kanykeinu.hollyramadan.data.common.Tables
 data class HadithEntity(
     @PrimaryKey
     @ColumnInfo(name = "number")
-    var number: Int,
+    var number: String,
     @ColumnInfo(name = "text")
     var text: String,
     @ColumnInfo(name = "source")

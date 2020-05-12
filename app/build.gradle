@@ -79,4 +79,7 @@ dependencies {
     debugImplementation 'com.facebook.flipper:flipper:0.34.0'
     debugImplementation 'com.facebook.soloader:soloader:0.8.2'
     releaseImplementation 'com.facebook.flipper:flipper-noop:0.34.0'
+
+    //view
+    implementation "androidx.viewpager2:viewpager2:1.0.0-alpha01"
 }
